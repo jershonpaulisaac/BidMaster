@@ -99,6 +99,31 @@
         display: flex;
     }
     
+    .navbar {
+        height: 80px;
+        padding: 20px 0;
+    }
+    
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1.4rem;
+    }
+    
+    .logo-text {
+        font-size: 1.4rem;
+    }
+    
+    .icon-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .icon-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+    
     .section-padding {
         padding: 60px 0;
     }
@@ -148,6 +173,31 @@
 /* 480px and down (Large Phones) */
 @media (max-width: 480px) {
     h1 { font-size: 2rem; }
+    
+    .navbar {
+        height: 70px;
+        padding: 15px 0;
+    }
+    
+    .logo-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    .icon-btn {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .icon-btn svg {
+        width: 16px;
+        height: 16px;
+    }
     
     .hero-btns {
         flex-direction: column;
