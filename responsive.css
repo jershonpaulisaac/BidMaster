@@ -299,9 +299,8 @@
         gap: 5px;
     }
     
-    .profile-nav svg {
-        width: 16px;
-        height: 16px;
+    .profile-nav a:nth-child(n+4) {
+        display: none;
     }
     
     .form-row {
@@ -328,8 +327,8 @@
         gap: 10px;
     }
     
-    .history-filters select {
-        width: 100%;
+    .profile-section:nth-child(n+4) {
+        display: none;
     }
     
     /* Auctions Page Responsive */
