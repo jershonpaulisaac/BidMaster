@@ -265,6 +265,21 @@
     
     .profile-sidebar {
         margin-bottom: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .profile-avatar-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .profile-avatar-section p {
+        font-size: 0.9rem;
     }
     
     .profile-nav {
