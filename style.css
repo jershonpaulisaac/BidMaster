@@ -478,7 +478,7 @@ p { margin-bottom: 1rem; }
 /* Mobile Nav Overlay */
 .mobile-nav {
     position: fixed;
-    top: 80px;
+    top: 120px;
     left: 0;
     width: 100%;
     height: 0;
@@ -489,7 +489,7 @@ p { margin-bottom: 1rem; }
 }
 
 .mobile-nav.active {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 120px);
 }
 
 .mobile-nav-content {

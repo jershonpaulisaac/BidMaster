@@ -207,4 +207,239 @@
     .mt-mobile-2 {
         margin-top: 1rem;
     }
+    
+    /* Profile Page Responsive */
+    .profile-layout {
+        flex-direction: column;
+    }
+    
+    .profile-sidebar {
+        margin-bottom: 30px;
+    }
+    
+    .profile-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .profile-nav a {
+        flex: 1 1 calc(50% - 10px);
+        text-align: center;
+        padding: 12px 8px;
+        font-size: 0.85rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .profile-nav svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .history-table-container {
+        overflow-x: auto;
+    }
+    
+    .history-table {
+        min-width: 600px;
+        font-size: 0.8rem;
+    }
+    
+    .history-filters {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .history-filters select {
+        width: 100%;
+    }
+    
+    /* Auctions Page Responsive */
+    .auction-filters {
+        padding: 20px;
+    }
+    
+    .filters-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .auction-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .auction-card {
+        max-width: 100%;
+    }
+    
+    /* About/Contact Pages */
+    .about-hero {
+        padding: 60px 0;
+        text-align: center;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .contact-form {
+        max-width: 100%;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Dashboard */
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .activity-list {
+        max-height: 300px;
+    }
+    
+    /* General Mobile Improvements */
+    .section-padding {
+        padding: 40px 0;
+    }
+    
+    .container.narrow {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .page-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .tab-content {
+        padding: 20px 0;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .profile-nav a {
+        flex: 1 1 100%;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sellers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .category-card h3 {
+        font-size: 0.9rem;
+    }
+    
+    .category-card span {
+        font-size: 0.8rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-btns .btn {
+        width: 100%;
+    }
+    
+    .live-banner-content {
+        padding: 30px 20px;
+    }
+    
+    .live-text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .step-card {
+        text-align: center;
+    }
+    
+    .footer-brand {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    /* Notification Dropdown Mobile */
+    .notification-dropdown {
+        width: calc(100vw - 40px);
+        max-width: 350px;
+        left: 20px;
+        right: 20px;
+    }
 }
