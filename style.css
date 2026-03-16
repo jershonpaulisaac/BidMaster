@@ -1267,3 +1267,11 @@ body.rtl .footer-top { grid-template-columns: 1fr 1fr 1fr 1.5fr; }
 body.rtl .footer-links { text-align: right; }
 body.rtl .footer-brand { text-align: right; }
 body.rtl .social-links { justify-content: flex-end; }
+
+body.rtl .nav-right { flex-direction: row-reverse; }
+
+body.rtl .mobile-nav-content { direction: rtl; text-align: right; }
+
+body.rtl .mobile-search input { text-align: right; }
+
+body.rtl .mobile-links { text-align: right; }
