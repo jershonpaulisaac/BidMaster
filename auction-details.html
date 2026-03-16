@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Details | BidMaster Elite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <!-- Global Navigation -->
+    <nav class="navbar sticky" id="main-nav">
+        <div class="container nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">B</span>
+                    <span class="logo-text">BidMaster<span>Elite</span></span>
+                </a>
+                <div class="nav-links desktop-only">
+                    <a href="index.html">Home</a>
+                    <a href="auctions.html">Auctions</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div class="nav-center desktop-only">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for luxury items, collectibles..." id="global-search">
+                    <select id="category-select">
+                        <option value="all">All Categories</option>
+                        <option value="art">Fine Art</option>
+                        <option value="watches">Watches</option>
+                        <option value="cars">Classic Cars</option>
+                        <option value="real-estate">Real Estate</option>
+                        <option value="jewelry">Jewelry</option>
+                    </select>
+                    <button class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <button id="dir-toggle" class="icon-btn" title="Toggle RTL/LTR">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 12l4-4m-4 4l4 4"></path></svg>
+                </button>
+                <div class="user-actions">
+                    <a href="dashboard.html" class="icon-btn" title="Notifications">
+                        <span class="badge">3</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                    </a>
+                    <a href="profile.html" class="user-profile-link">
+                        <img src="https://picsum.photos/seed/user1/40/40" alt="User" class="avatar">
+                    </a>
+                </div>
+                <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> &rsaquo; 
+                <a href="auctions.html">Auctions</a> &rsaquo; 
+                <span id="breadcrumb-current">Item Details</span>
+            </nav>
+
+            <div class="auction-detail-container" id="auction-detail-view">
+                <!-- Left: Gallery -->
+                <div class="detail-gallery">
+                    <div class="main-image">
+                        <img src="https://picsum.photos/seed/luxury/800/600" alt="Main Item Image" id="main-product-img">
+                        <div class="zoom-overlay">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                        </div>
+                    </div>
+                    <div class="thumbnail-grid">
+                        <img src="https://picsum.photos/seed/lux1/200/200" alt="Thumb 1" class="active">
+                        <img src="https://picsum.photos/seed/lux2/200/200" alt="Thumb 2">
+                        <img src="https://picsum.photos/seed/lux3/200/200" alt="Thumb 3">
+                        <img src="https://picsum.photos/seed/lux4/200/200" alt="Thumb 4">
+                    </div>
+                </div>
+
+                <!-- Right: Bidding Info -->
+                <div class="detail-info">
+                    <div class="info-header">
+                        <span class="category-tag" id="detail-category">Fine Art</span>
+                        <h1 id="detail-title">Vintage Patek Philippe Nautilus 5711</h1>
+                        <div class="seller-info">
+                            <img src="https://picsum.photos/seed/seller/40/40" alt="Seller" class="seller-avatar">
+                            <span>Listed by <strong>EliteCollections</strong> <span class="rating">★ 4.9 (124 sales)</span></span>
+                        </div>
+                    </div>
+
+                    <div class="bidding-card">
+                        <div class="bidding-timer">
+                            <span>Time Remaining</span>
+                            <strong class="countdown" id="detail-countdown" data-time="12345">02h : 15m : 45s</strong>
+                        </div>
+                        <div class="price-info">
+                            <div class="current-bid">
+                                <small>Current Bid</small>
+                                <strong id="detail-current-bid">$124,500</strong>
+                            </div>
+                            <div class="starting-price">
+                                <small>Starting Price</small>
+                                <span id="detail-starting-price">$80,000</span>
+                            </div>
+                        </div>
+
+                        <div class="bid-input-group">
+                            <div class="input-wrapper">
+                                <span>$</span>
+                                <input type="number" id="bid-amount" placeholder="Enter bid amount" min="125000" step="500">
+                            </div>
+                            <button class="btn btn-primary btn-lg" id="place-bid-btn">Place Bid</button>
+                        </div>
+                        <p class="bid-note">Enter $125,000 or more (Next minimum bid)</p>
+
+                        <div class="bid-actions">
+                            <button class="btn btn-outline btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> Add to Watchlist</button>
+                            <button class="btn btn-outline btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg> Share</button>
+                        </div>
+                    </div>
+
+                    <div class="detail-tabs">
+                        <div class="tab-nav">
+                            <button class="tab-btn active" data-tab="description">Description</button>
+                            <button class="tab-btn" data-tab="history">Bid History</button>
+                            <button class="tab-btn" data-tab="shipping">Shipping & Returns</button>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab-description">
+                                <p id="detail-description">This is a rare opportunity to own a Patek Philippe Nautilus 5711 in pristine condition. Originally purchased in 2018, this timepiece has been meticulously maintained and comes with all original papers and box.</p>
+                                <ul class="specs-list">
+                                    <li><strong>Case Size:</strong> 40mm</li>
+                                    <li><strong>Material:</strong> Stainless Steel</li>
+                                    <li><strong>Movement:</strong> Automatic</li>
+                                    <li><strong>Water Resistance:</strong> 120m</li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane" id="tab-history">
+                                <table class="history-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Bidder</th>
+                                            <th>Amount</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="bid-history-body">
+                                        <!-- Dynamically populated -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane" id="tab-shipping">
+                                <p>We offer fully insured global shipping via specialized luxury couriers. All items are professionally packed and tracked.</p>
+                                <p><strong>Estimated Delivery:</strong> 5-7 business days</p>
+                                <p><strong>Return Policy:</strong> 14-day money-back guarantee if the item does not match the authentication certificate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Auctions -->
+            <section class="related-auctions mt-5">
+                <h2 class="section-title">Similar Items You Might Like</h2>
+                <div class="auction-grid" id="related-grid">
+                    <!-- Dynamically populated -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">B</span>
+                        <span class="logo-text">BidMaster<span>Elite</span></span>
+                    </a>
+                    <p>The world's leading marketplace for extraordinary assets and luxury collectibles. Authenticated, secure, and global.</p>
+                </div>
+                <!-- ... other footer links ... -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BidMaster Elite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="auction-data.js"></script>
+    <script src="ui.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

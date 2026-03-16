@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | BidMaster Elite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <!-- Global Navigation -->
+    <nav class="navbar sticky" id="main-nav">
+        <div class="container nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">B</span>
+                    <span class="logo-text">BidMaster</span>
+                </a>
+                <div class="nav-links desktop-only">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="auctions.html">Auctions</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div class="nav-center desktop-only">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for luxury items, collectibles..." id="global-search">
+                    <select id="category-select">
+                        <option value="all">All Categories</option>
+                        <option value="art">Fine Art</option>
+                        <option value="watches">Watches</option>
+                        <option value="cars">Classic Cars</option>
+                        <option value="real-estate">Real Estate</option>
+                        <option value="jewelry">Jewelry</option>
+                    </select>
+                    <button class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <button id="dir-toggle" class="icon-btn" title="Toggle RTL/LTR">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4M3 12h18"/></svg>
+                </button>
+                <div class="user-actions">
+                    <div class="notification-wrapper">
+                        <button class="icon-btn" id="notification-btn" title="Notifications">
+                            <span class="badge">3</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        </button>
+                        <div class="notification-dropdown" id="notification-dropdown">
+                            <div class="notification-header">
+                                <h3>Notifications</h3>
+                                <button class="text-accent text-xs">Mark all as read</button>
+                            </div>
+                            <div class="notification-list">
+                                <div class="notification-item unread">
+                                    <div class="notif-icon bid"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+                                    <div class="notif-content">
+                                        <p>You've been outbid on <strong>Vintage Rolex Submariner</strong>.</p>
+                                        <span>2 minutes ago</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item unread">
+                                    <div class="notif-icon win"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+                                    <div class="notif-content">
+                                        <p>Congratulations! You won the <strong>1967 Porsche 911</strong>.</p>
+                                        <span>1 hour ago</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="notif-icon alert"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+                                    <div class="notif-content">
+                                        <p>Auction ending soon: <strong>Diamond Tennis Bracelet</strong>.</p>
+                                        <span>3 hours ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <a href="profile.html" class="icon-btn" title="Account">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </a>
+                </div>
+                <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-content">
+            <div class="mobile-search">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="mobile-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="auctions.html">Auctions</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <hr>
+                <a href="dashboard.html">My Dashboard</a>
+                <a href="profile.html">My Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="profile-page">
+        <div class="container narrow">
+            <header class="page-header text-center">
+                <h1>My Profile</h1>
+                <p>Manage your account, preferences, and bidding experience.</p>
+            </header>
+
+            <div class="profile-layout">
+                <!-- Profile Sidebar -->
+                <aside class="profile-sidebar">
+                    <div class="profile-avatar-section">
+                        <div class="profile-avatar-edit">
+                            <img src="https://picsum.photos/seed/user1/120/120" alt="User" class="profile-avatar">
+                            <button class="edit-avatar-btn" id="edit-avatar-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                            </button>
+                        </div>
+                        <h3>Jershon Paul</h3>
+                        <p>Premium Member</p>
+                        <div class="member-since">Member since 2024</div>
+                    </div>
+
+                    <nav class="profile-nav">
+                        <a href="#personal" class="active"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Personal Information</a>
+                        <a href="#preferences"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> Bidding Preferences</a>
+                        <a href="#notifications"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg> Notifications</a>
+                        <a href="#security"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><circle cx="12" cy="16" r="1"></circle><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Security & Privacy</a>
+                        <a href="#history"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Bidding History</a>
+                    </nav>
+                </aside>
+
+                <!-- Profile Content -->
+                <div class="profile-main">
+                    <!-- Personal Information -->
+                    <section class="profile-section" id="personal">
+                        <div class="section-header">
+                            <h2>Personal Information</h2>
+                            <p>Update your personal details and contact information.</p>
+                        </div>
+                        <form class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name" value="Jershon" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" value="Paul" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" value="jershon.paul@example.com" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" value="+91 0000000000" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bio">About Me</label>
+                                <textarea id="bio" class="form-control" rows="4">Passionate collector of luxury watches and modern art. Always looking for unique pieces to add to my private collection.</textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input type="text" id="location" value="Tamilnadu,India " class="form-control">
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                <button type="button" class="btn btn-outline">Cancel</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Bidding Preferences -->
+                    <section class="profile-section" id="preferences">
+                        <div class="section-header">
+                            <h2>Bidding Preferences</h2>
+                            <p>Customize your bidding experience and category interests.</p>
+                        </div>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label>Preferred Categories</label>
+                                <div class="checkbox-grid">
+                                    <label class="checkbox-container">Fine Art <input type="checkbox" checked><span class="checkmark"></span></label>
+                                    <label class="checkbox-container">Luxury Watches <input type="checkbox" checked><span class="checkmark"></span></label>
+                                    <label class="checkbox-container">Classic Cars <input type="checkbox"><span class="checkmark"></span></label>
+                                    <label class="checkbox-container">Jewelry <input type="checkbox" checked><span class="checkmark"></span></label>
+                                    <label class="checkbox-container">Real Estate <input type="checkbox"><span class="checkmark"></span></label>
+                                    <label class="checkbox-container">Antiques <input type="checkbox"><span class="checkmark"></span></label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="max-bid">Maximum Auto-Bid Limit</label>
+                                <input type="number" id="max-bid" value="50000" class="form-control">
+                                <small class="form-help">Set a maximum amount you're willing to bid automatically.</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bid-increment">Preferred Bid Increment</label>
+                                <select id="bid-increment" class="form-control">
+                                    <option value="1">1%</option>
+                                    <option value="5" selected>5%</option>
+                                    <option value="10">10%</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-container">Enable Proxy Bidding <input type="checkbox" checked><span class="checkmark"></span></label>
+                                <small class="form-help">Allow automatic bidding up to your maximum limit.</small>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Preferences</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Notifications -->
+                    <section class="profile-section" id="notifications">
+                        <div class="section-header">
+                            <h2>Notification Settings</h2>
+                            <p>Choose how you want to be notified about auctions and bids.</p>
+                        </div>
+                        <form class="profile-form">
+                            <div class="notification-settings">
+                                <div class="setting-group">
+                                    <h4>Email Notifications</h4>
+                                    <label class="checkbox-container">Auction updates <input type="checkbox" checked><span class="checkmark"></span></label>
+                                    <label class="checkbox-container">Bid confirmations <input type="checkbox" checked><span class="checkmark"></span></label>
+                                    <label class="checkbox-container">Outbid alerts <input type="checkbox" checked><span class="checkmark"></span></label>
+                                    <label class="checkbox-container">Auction results <input type="checkbox" checked><span class="checkmark"></span></label>
+                                    <label class="checkbox-container">Weekly digest <input type="checkbox"><span class="checkmark"></span></label>
+                                </div>
+
+                                <div class="setting-group">
+                                    <h4>Push Notifications</h4>
+                                    <label class="checkbox-container">New auctions in my categories <input type="checkbox" checked><span class="checkmark"></span></label>
+                                    <label class="checkbox-container">Ending soon alerts <input type="checkbox" checked><span class="checkmark"></span></label>
+                                    <label class="checkbox-container">Price drops <input type="checkbox"><span class="checkmark"></span></label>
+                                </div>
+
+                                <div class="setting-group">
+                                    <h4>SMS Notifications</h4>
+                                    <label class="checkbox-container">Critical bid alerts <input type="checkbox"><span class="checkmark"></span></label>
+                                    <label class="checkbox-container">Auction wins <input type="checkbox" checked><span class="checkmark"></span></label>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Save Settings</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Security & Privacy -->
+                    <section class="profile-section" id="security">
+                        <div class="section-header">
+                            <h2>Security & Privacy</h2>
+                            <p>Manage your account security and privacy settings.</p>
+                        </div>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label for="current-password">Current Password</label>
+                                <input type="password" id="current-password" class="form-control">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="new-password">New Password</label>
+                                    <input type="password" id="new-password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-password">Confirm New Password</label>
+                                    <input type="password" id="confirm-password" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-container">Enable Two-Factor Authentication <input type="checkbox"><span class="checkmark"></span></label>
+                                <small class="form-help">Add an extra layer of security to your account.</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-container">Make my bids private <input type="checkbox"><span class="checkmark"></span></label>
+                                <small class="form-help">Hide your bid amounts from other users.</small>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Update Security</button>
+                                <button type="button" class="btn btn-danger">Delete Account</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Bidding History -->
+                    <section class="profile-section" id="history">
+                        <div class="section-header">
+                            <h2>Bidding History</h2>
+                            <p>View your past bidding activity and auction results.</p>
+                        </div>
+                        <div class="history-filters">
+                            <select class="form-control">
+                                <option>All Time</option>
+                                <option>Last 30 Days</option>
+                                <option>Last 3 Months</option>
+                                <option>Last Year</option>
+                            </select>
+                            <select class="form-control">
+                                <option>All Auctions</option>
+                                <option>Won Auctions</option>
+                                <option>Lost Auctions</option>
+                                <option>Active Bids</option>
+                            </select>
+                        </div>
+                        <div class="history-table-container">
+                            <table class="history-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Item</th>
+                                        <th>Your Bid</th>
+                                        <th>Result</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2026-03-15</td>
+                                        <td>Vintage Rolex Submariner</td>
+                                        <td>$124,500</td>
+                                        <td><span class="badge-success">Won</span></td>
+                                        <td><a href="#" class="btn btn-xs btn-outline">View Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2026-03-10</td>
+                                        <td>Abstract Modern Art</td>
+                                        <td>$42,000</td>
+                                        <td><span class="badge-danger">Lost</span></td>
+                                        <td><a href="#" class="btn btn-xs btn-outline">View Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2026-02-28</td>
+                                        <td>1967 Porsche 911</td>
+                                        <td>$12.5M</td>
+                                        <td><span class="badge-success">Won</span></td>
+                                        <td><a href="#" class="btn btn-xs btn-outline">View Details</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 BidMaster Elite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="ui.js"></script>
+    <script src="script.js"></script>
+</body>
+</html></content>
+<parameter name="filePath">e:\Bidmaster webpage\profile.html

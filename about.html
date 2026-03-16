@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | BidMaster Elite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <!-- Global Navigation -->
+    <nav class="navbar sticky" id="main-nav">
+        <div class="container nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">B</span>
+                    <span class="logo-text">BidMaster</span>
+                </a>
+                <div class="nav-links desktop-only">
+                    <a href="index.html">Home</a>
+                    <a href="auctions.html">Auctions</a>
+                    <a href="about.html" class="active">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div class="nav-center desktop-only">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for luxury items, collectibles..." id="global-search">
+                    <select id="category-select">
+                        <option value="all">All Categories</option>
+                        <option value="art">Fine Art</option>
+                        <option value="watches">Watches</option>
+                        <option value="cars">Classic Cars</option>
+                        <option value="real-estate">Real Estate</option>
+                        <option value="jewelry">Jewelry</option>
+                    </select>
+                    <button class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <button id="dir-toggle" class="icon-btn" title="Toggle RTL/LTR">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4M3 12h18"/></svg>
+                </button>
+                <div class="user-actions">
+                    <div class="notification-wrapper">
+                        <button class="icon-btn" id="notification-btn" title="Notifications">
+                            <span class="badge">3</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        </button>
+                        <div class="notification-dropdown" id="notification-dropdown">
+                            <div class="notification-header">
+                                <h3>Notifications</h3>
+                                <button class="text-accent text-xs">Mark all as read</button>
+                            </div>
+                            <div class="notification-list">
+                                <div class="notification-item unread">
+                                    <div class="notif-icon bid"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></div>
+                                    <div class="notif-content">
+                                        <p>You've been outbid on <strong>Vintage Rolex Submariner</strong>.</p>
+                                        <span>2 minutes ago</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item unread">
+                                    <div class="notif-icon win"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+                                    <div class="notif-content">
+                                        <p>Congratulations! You won the <strong>1967 Porsche 911</strong>.</p>
+                                        <span>2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="notif-icon alert"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+                                    <div class="notif-content">
+                                        <p>Auction ending soon: <strong>Diamond Tennis Bracelet</strong>.</p>
+                                        <span>3 hours ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <a href="profile.html" class="icon-btn" title="Account">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </a>
+                </div>
+                <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-content">
+            <div class="mobile-search">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="mobile-links">
+                <a href="index.html">Home</a>
+                <a href="auctions.html">Auctions</a>
+                <a href="about.html" class="active">About</a>
+                <a href="contact.html">Contact</a>
+                <hr>
+                <a href="dashboard.html">My Dashboard</a>
+                <a href="profile.html">My Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="about-page">
+        <!-- About Hero -->
+        <section class="about-hero section-padding bg-dark text-white">
+            <div class="container text-center">
+                <h1>Redefining the Luxury <span>Auction Experience</span></h1>
+                <p class="lead">Since 2015, BidMaster has been the premier destination for collectors, investors, and connoisseurs of the extraordinary.</p>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission section-padding">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="mission-text">
+                        <h2 class="section-title">Our Mission</h2>
+                        <p>At BidMaster, our mission is to democratize access to high-value assets while maintaining the highest standards of authentication, security, and professional service. We believe that the world's most extraordinary items should be accessible to those who truly appreciate them, regardless of where they are in the world.</p>
+                        <p>We combine cutting-edge technology with decades of expertise in art, horology, and luxury goods to create a marketplace that is transparent, efficient, and inspiring.</p>
+                    </div>
+                    <div class="mission-image">
+                        <span class="logo-icon" style="height: 200px; width: 200px;font-size: 150px;">B</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                        <h3>Uncompromising Integrity</h3>
+                        <p>We stand behind every item listed on our platform. Our rigorous multi-step authentication process ensures that you bid with absolute confidence.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+                        <h3>Global Community</h3>
+                        <p>We connect sellers and buyers from over 120 countries, fostering a diverse and vibrant community of collectors and enthusiasts.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+                        <h3>Innovation</h3>
+                        <p>We continuously evolve our platform to provide the most seamless, real-time bidding experience possible across all devices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">Meet Our Experts</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="https://images.unsplash.com/photo-1676195470090-7c90bf539b3b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFsZSUyMHNpbGhvdWV0dGV8ZW58MHx8MHx8fDA%3D" alt="Alexander Thorne">
+                        </div>
+                        <div class="team-info">
+                            <h3>Alexander Thorne</h3>
+                            <p>Head of Fine Art</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="https://media.istockphoto.com/id/1188176661/photo/unknown-female-person-silhouette-in-studio-concept-of-depression.webp?a=1&b=1&s=612x612&w=0&k=20&c=VXlnD01kaxU88YRIVx80L1H8qqxje2Mk-1MpMhqCGJU=" alt="Elena Rodriguez">
+                        </div>
+                        <div class="team-info">
+                            <h3>Elena Rodriguez</h3>
+                            <p>Horology Specialist</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="https://media.istockphoto.com/id/1768858548/photo/dark-backlight-shadow-silhouette-of-male-person-incognito-unknown-profile.webp?a=1&b=1&s=612x612&w=0&k=20&c=nO5vniMxFB_BbOSkk2llnbzRsG6byoZpHG23xHgAyf4=" alt="David Kim">
+                        </div>
+                        <div class="team-info">
+                            <h3>David Kim</h3>
+                            <p>Classic Car Consultant</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="https://media.istockphoto.com/id/514326952/photo/silhouette-of-young-woman.webp?a=1&b=1&s=612x612&w=0&k=20&c=Q6gTwtgXHYljGZpKUtUwCywHJ_2vqghVRA-Rf4Io77E=" alt="Sophia Laurent">
+                        </div>
+                        <div class="team-info">
+                            <h3>Sophia Laurent</h3>
+                            <p>Jewelry Authenticator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">B</span>
+                        <span class="logo-text">BidMaster</span>
+                    </a>
+                    <p>The world's leading marketplace for extraordinary assets and luxury collectibles. Authenticated, secure, and global.</p>
+                    <div class="social-links">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Auctions</h3>
+                    <ul>
+                        <li><a href="auctions.html">Live Auctions</a></li>
+                        <li><a href="auctions.html">Upcoming</a></li>
+                        <li><a href="auctions.html">Recently Sold</a></li>
+                        <li><a href="auctions.html">Art & Antiques</a></li>
+                        <li><a href="auctions.html">Luxury Watches</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">Our Experts</a></li>
+                        <li><a href="contact.html">Press</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="about.html">Help Center</a></li>
+                        <li><a href="about.html">Bidding Rules</a></li>
+                        <li><a href="about.html">Shipping Info</a></li>
+                        <li><a href="about.html">Terms of Service</a></li>
+                        <li><a href="about.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BidMaster. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Sitemap</a>
+                    <a href="#">Security</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="ui.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

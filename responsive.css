@@ -1,0 +1,210 @@
+/* 
+   BidMaster Elite - Responsive Styles
+   Breakpoints: 320px, 480px, 768px, 1024px, 1440px
+*/
+
+/* 1440px and up */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* 1024px and down (Tablets & Laptops) */
+@media (max-width: 1024px) {
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2rem; }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-text {
+        order: 2;
+    }
+    
+    .hero-image {
+        order: 1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .hero-btns {
+        justify-content: center;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+    }
+    
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-sidebar {
+        margin-bottom: 30px;
+    }
+
+    .newsletter-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 24px;
+        border-radius: 20px;
+    }
+
+    .newsletter-form {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        background: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        background: var(--white);
+        border: 1px solid var(--border-color);
+        padding: 15px 20px;
+        border-radius: 12px;
+    }
+
+    .newsletter-form .btn {
+        width: 100%;
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .live-banner-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+/* 768px and down (Tablets) */
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .section-padding {
+        padding: 60px 0;
+    }
+    
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .category-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+    
+    .filters-row {
+        flex-direction: column;
+    }
+    
+    .filters-main {
+        flex-direction: column;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .auction-detail-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .detail-gallery {
+        margin-bottom: 30px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partners-flex {
+        justify-content: center;
+    }
+}
+
+/* 480px and down (Large Phones) */
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    
+    .hero-btns {
+        flex-direction: column;
+    }
+    
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-nav {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5px;
+    }
+}
+
+/* 320px and down (Small Phones) */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .logo-text {
+        font-size: 1.1rem;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Utility Classes for Responsive */
+@media (max-width: 768px) {
+    .mt-mobile-2 {
+        margin-top: 1rem;
+    }
+}
